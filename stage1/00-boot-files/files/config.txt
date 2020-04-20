@@ -63,3 +63,7 @@ max_framebuffers=2
 
 [all]
 #dtoverlay=vc4-fkms-v3d
+
+# Disables the Bluetooth device and restores UART0/ttyAMA0 to GPIOs 14 and 15.
+dtoverlay=disable-bt
+dtoverlay=disable-wifi

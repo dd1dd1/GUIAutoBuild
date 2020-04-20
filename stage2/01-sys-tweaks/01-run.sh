@@ -37,6 +37,10 @@ EOF
 fi
 
 on_chroot <<EOF
+systemctl disable hciuart
+EOF
+
+on_chroot <<EOF
 for GRP in input spi i2c gpio; do
 	groupadd -f -r "\$GRP"
 done
